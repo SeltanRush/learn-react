@@ -1,2 +1,25 @@
+.article {
+  width: 60%;
+  color: #008000;
+  height: auto;
+  background: #0ff;
+  border: 0.3rem solid #006400;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  margin: 1rem;
+  font-family: Roboto, sans-serif;
+}
+.news {
+  list-style: none;
+  width: 40rem;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 
 /*# sourceMappingURL=index.css.map*/
