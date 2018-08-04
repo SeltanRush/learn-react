@@ -1,5 +1,6 @@
 import React from 'react';
 import News from '../News/News.jsx'
+import NewsForm from '../NewsForm/NewsForm.jsx'
 
 const dataNews = [
 	{
@@ -20,9 +21,23 @@ const dataNews = [
 ]
 
 class App extends React.Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			data: dataNews
+		}
+		this.handleAddArticle = (article) =>{
+			this.setState({
+				data: this.state.data.concat(article)
+			})	
+		}
+	}
 	render(){
 		return (
-			<News data={dataNews} />
+			<div className='news__app'>
+				<News data={this.state.data} />
+				<NewsForm onAddArticle={this.handleAddArticle} />
+			</div>
 		)
 	}
 }
