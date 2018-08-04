@@ -1,5 +1,5 @@
 .article {
-  width: 60%;
+  width: 100%;
   color: #008000;
   height: auto;
   background: #0ff;
@@ -8,10 +8,30 @@
   padding: 1rem;
   margin: 1rem;
   font-family: Roboto, sans-serif;
+  position: relative;
+}
+.article__button {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  cursor: pointer;
+  padding: 0.4rem;
+  background: #9acd32;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .news {
-  list-style: none;
   width: 40rem;
+}
+.news__list {
+  list-style: none;
+  width: 60%;
+  margin: 0;
+  padding: 0;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;

@@ -5,13 +5,16 @@ class News extends React.Component {
 	render(){
 		const NewsContent = this.props.data.map((item)=>{
 			return (
-				<Article data={item} />
+				<Article data={item} key={item.id} />
 			)
-		})
+		});
+		const NewsZero = <p className='news__text'>Новостей нет</p>;
 		return (
-			<ul className='news'>
-				{NewsContent}
-			</ul>
+			<div className='news'>
+				<ul className='news__list'>
+					{this.props.data.length ? NewsContent : NewsZero}
+				</ul>
+			</div>
 		)
 	}
 }
