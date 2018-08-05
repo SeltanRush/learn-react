@@ -10,6 +10,7 @@ module.exports = {
 		index: './src/pages/index/index.js'
 	},
   output: {
+		publicPath: '/',
     path: path.resolve(__dirname, "public"),
     filename: "[name].js"
 	},
@@ -69,6 +70,7 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist'),
 		compress: true,
 		stats: 'errors-only',
+		historyApiFallback: true
   },
   plugins: [
     new HtmlWebpackPlugin({

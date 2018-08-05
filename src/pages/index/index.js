@@ -1,7 +1,8 @@
 import './index.styl';
 import React from 'react';
 import {render} from 'react-dom';
-import App from '../../components/App/App.jsx'
 
-render(<App/>, document.querySelectorAll('.container')[0]);
+import Navigation from '../../components/Navigation/Navigation.jsx'
+
+render(<Navigation/>, document.querySelectorAll('.container')[0]);
 

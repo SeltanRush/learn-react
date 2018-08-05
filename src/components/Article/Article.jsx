@@ -3,15 +3,13 @@ import React from 'react'
 class Article extends React.Component{
 	constructor(props){
 		super(props);
-		this.state = {
-			text: false
-		}
 		this.handlerText = () => {
-			this.setState({text: this.state.text ? false : true})
+			const open = this.props.isOpen ? false : this.props.data.id;
+			this.props.handlerText(open);
 		}
 	}
 	render(){
-		if (!this.state.text){
+		if (!this.props.isOpen){
 			return (
 				<li className='article'>
 					<h3 className='article__title'>
